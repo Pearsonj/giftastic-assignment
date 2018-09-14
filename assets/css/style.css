@@ -1,0 +1,34 @@
+body{
+    background-color: green;
+}
+
+.topic{
+    text-align: center;
+    margin: 2px;
+    position: relative;
+    bottom: 55px;
+    border-radius: 40px;
+    font-family: impact;
+    font-size: 18px;
+}
+
+header{
+    text-align: center;
+}
+
+.topRow {
+    margin-top: 5%;
+}
+
+.search{
+    
+    
+}
+
+.buttons{
+    
+}
+
+.gif{
+    
+}

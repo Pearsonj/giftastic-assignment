@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GifTastic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+<!--make a header with instructions on how to use the website-->
+<!-- make a div That has a searchbar and button to search, but also make it work with a press of the enter key -->
+<!-- make a div that the buttons will appear inside of and a div to post gifs too -->
+<!-- add a div to display the rating of each gif displayed. -->
+
+<body>
+    <header>
+        <p>
+            <h1>Click one of the preset topics or enter one of your own in the search! Just Click a topic to make gifs
+                appear!</h1>
+        </p>
+
+    </header>
+    <div id="container">
+        <div class="row topRow">
+            <div class="col-6 ">
+                <div class="jumbotron jumbotron-fluid search">
+                    <div class="container">
+                        <h1 class="display-4">Search here!</h1>
+                        <p class="lead"><input class="form-control bar" type="text" placeholder="Default input"><br>
+                            <button type="submit" class="btn btn-primary">Search!</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 ">
+                <div class="jumbotron jumbotron-fluid buttons">
+                    <div class="container">
+                        <p class="lead"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 ">
+                    <div class="jumbotron jumbotron-fluid gifs">
+                            <div class="container">
+                              <h1 class="display-4">gifs will appear here!</h1>
+                              <p class="lead"></p>
+                            </div>
+                          </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>
