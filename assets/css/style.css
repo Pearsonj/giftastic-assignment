@@ -1,8 +1,8 @@
-body{
+body {
     background-color: green;
 }
 
-.topic{
+.topic {
     text-align: center;
     margin: 2px;
     position: relative;
@@ -12,7 +12,7 @@ body{
     font-size: 18px;
 }
 
-header{
+header {
     text-align: center;
 }
 
@@ -20,15 +20,23 @@ header{
     margin-top: 5%;
 }
 
-.search{
-    
-    
+.search {
+    border-radius: 30px;
+
+
 }
 
-.buttons{
-    
+.buttons {
+    border-radius: 30px;
+
+
 }
 
-.gif{
-    
+.gifs {
+    border-radius: 30px;
+
+}
+
+.gifs img{
+    display: inline;
 }
