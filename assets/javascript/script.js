@@ -16,29 +16,40 @@ function buttons() {
         button.text(topics[i]);
 
         $('.buttons').append(button);
-    }
-
-    $('.btn').on('click', function(event){
-        event.preventDefault();
-    
-        var topic = $('.bar').val().trim();
-    
-        topics.push(topic);
-    
-        buttons();
-    
-        
-    });
+    } 
 }
 
 
 buttons();
 
-$('.topic').on('click', function(){
+$('.btn').on('click', function(event)
+{
+    event.preventDefault();
+
+    var topic = $('.bar').val().trim();
+
+    topics.push(topic);
+    console.log(topic);
+
+
+   if(topic !== '') {
+   buttons();
+}
+
+    $('.bar').val('');
+    
+});
+
+$(document).on('click', 
+'.topic', function(){
     var gif = $(this).attr('topic-name');
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     gif + "&api_key=dc6zaTOxFJmzC&limit=10";
     console.log(gif);
+    console.log($('.bar'));
+
+    
+    
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -61,11 +72,15 @@ $('.topic').on('click', function(){
             gifDiv.append(gifImage);
 
             $(".gifs").prepend(gifDiv);
+           
         }
+        
 
       
         
 
     });
 });
+
+
 
