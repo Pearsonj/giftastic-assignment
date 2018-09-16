@@ -2,7 +2,7 @@
 // When a term is searched add a button to the page with searched term assinged to it.
 // create an array of topics and put it in a var called "topics".
 
-var topics = ['cats', 'music', 'food', 'travel', 'cars', 'funny'];
+var topics = ['its always sunny', 'ajj', 'zelda', 'dark souls', 'traveling', 'weird', 'glitch art', 'relaxation'];
 
 function buttons() {
     $('.buttons').empty();
