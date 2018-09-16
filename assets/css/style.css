@@ -1,5 +1,5 @@
 body {
-    background-color: green;
+    background-image: url(../random_grey_variations/random_grey_variations.png)
 }
 
 .topic {
@@ -10,11 +10,21 @@ body {
     border-radius: 40px;
     font-family: impact;
     font-size: 18px;
+    font-family: 'Amatic SC', cursive;
 }
 
+.jumbotron {
+    font-family: 'Amatic SC', cursive;
+}
 
 header {
     text-align: center;
+    color: lightyellow;
+    font-family: 'Amatic SC', cursive;
+}
+
+.rounded{
+    border-radius: 30px;
 }
 
 .topRow {
@@ -23,21 +33,25 @@ header {
 
 .search {
     border-radius: 30px;
+    font-family: 'Amatic SC', cursive;
 }
 
 .buttons {
     border-radius: 30px;
-
-
+    font-family: 'Amatic SC', cursive;
 }
 
 .gifs {
     border-radius: 30px;
-
-
+    display: inline-block;
+    text-align: center;
 }
 
 .gifs img {
-    display: inline;
-    
+    text-align: center;
+    display: inline-block;
+}
+
+.gifs p {
+    position: relative;
 }
