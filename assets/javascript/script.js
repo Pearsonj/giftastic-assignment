@@ -7,7 +7,7 @@ var topics = ['cats', 'music', 'food', 'travel', 'cars', 'funny'];
 function buttons() {
     $('.buttons').empty();
 
-    for (var i = 0; i < topics.length; i++){
+    for (var i = 0; i < topics.length; i++) {
 
         var button = $('<button>');
 
@@ -16,14 +16,13 @@ function buttons() {
         button.text(topics[i]);
 
         $('.buttons').append(button);
-    } 
+    }
 }
 
 
 buttons();
 
-$('.btn').on('click', function(event)
-{
+$('.btn').on('click', function (event) {
     event.preventDefault();
 
     var topic = $('.bar').val().trim();
@@ -32,55 +31,57 @@ $('.btn').on('click', function(event)
     console.log(topic);
 
 
-   if(topic !== '') {
-   buttons();
-}
+    if (topic !== '') {
+        buttons();
+    }
 
     $('.bar').val('');
-    
+
 });
 
-$(document).on('click', 
-'.topic', function(){
-    var gif = $(this).attr('topic-name');
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    gif + "&api_key=dc6zaTOxFJmzC&limit=10";
-    console.log(gif);
-    console.log($('.bar'));
+$(document).on('click',
+    '.topic',
+    function () {
+        var gif = $(this).attr('topic-name');
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+            gif + "&api_key=dc6zaTOxFJmzC&limit=10";
+        console.log(gif);
+        console.log($('.bar'));
 
-    
-    
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response){
-        console.log(queryURL);
-        console.log(response);
+        // var state = $(this).attr('data-state');
 
-        var image = response.data;
+        // if (state ===)
 
-        for(var i = 0; i < image.length; i++){
-            var gifDiv = $("<div>");
 
-            var gifRating = $("<p>").text("Rating: " + image[i].rating);
 
-            var gifImage = $("<img>");
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(queryURL);
+            console.log(response);
 
-            gifImage.attr("src", image[i].images.fixed_height.url);
+            var image = response.data;
 
-            gifDiv.append(gifRating);
-            gifDiv.append(gifImage);
+            for (var i = 0; i < image.length; i++) {
+                var gifDiv = $("<div>");
 
-            $(".gifs").prepend(gifDiv);
-           
-        }
-        
+                var gifRating = $("<p>").text("Rating: " + image[i].rating);
 
-      
-        
+                var gifImage = $("<img>");
 
+                gifImage.attr("src", image[i].images.fixed_height.url);
+
+                gifDiv.append(gifImage);
+                gifDiv.append(gifRating);
+
+                $(".gifs").prepend(gifDiv);
+
+            }
+
+
+
+
+
+        });
     });
-});
-
-
-

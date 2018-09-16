@@ -12,6 +12,7 @@ body {
     font-size: 18px;
 }
 
+
 header {
     text-align: center;
 }
@@ -22,8 +23,6 @@ header {
 
 .search {
     border-radius: 30px;
-
-
 }
 
 .buttons {
@@ -35,8 +34,10 @@ header {
 .gifs {
     border-radius: 30px;
 
+
 }
 
-.gifs img{
+.gifs img {
     display: inline;
+    
 }
