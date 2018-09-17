@@ -1,4 +1,4 @@
-*{
+* {
     font-weight: 800;
 }
 
@@ -27,7 +27,7 @@ header {
     font-family: 'Amatic SC', cursive;
 }
 
-.rounded{
+.rounded {
     border-radius: 30px;
 }
 
@@ -51,9 +51,14 @@ header {
     text-align: center;
 }
 
+.stillGif{
+    position: relative;
+    display: inline;
+}
+
 .gifs img {
     text-align: center;
-    display: inline-block;
+    display: inline;
 }
 
 .gifs p {
