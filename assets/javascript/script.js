@@ -65,18 +65,21 @@ $(document).on('click',
                 var gifDiv = $("<div>");
                 var gifRating = $("<p>").text("Rating: " + image[i].rating);
                 var gifImage = $("<img>");
-                var downloadBtn = $("<button><a href=" + image[i].images.fixed_height.url + " download </a> Click Here To Download </button>")
+                var downloadBtn = $('<button><a href=' + image[i].images.fixed_height.url +' download</a>Click Here To Download!</button>');
                 gifImage.attr('src', image[i].images.fixed_height_still.url);
                 gifImage.attr("data-still", image[i].images.fixed_height_still.url);
                 gifImage.attr('data-state', 'still');
                 gifImage.attr('data-animate', image[i].images.fixed_height.url);
-                gifImage.addClass('stillGif col-md-12 col-sm-12 col-12');
+                gifImage.addClass('img-responsive stillGif col-md-6 col-sm-3 col-3');
+                downloadBtn.addClass('link');
 
                 gifDiv.append(gifImage);
 
                 gifDiv.append(gifRating);
 
                 gifDiv.append(downloadBtn);
+
+                
 
                 $(".gifs").prepend(gifDiv);
 
@@ -95,9 +98,7 @@ $(document).on('click',
                         console.log(state);
                     }
 
-                    downloadBtn.on('click', function(){
-                        
-                    });
+
                 });
             }
         });

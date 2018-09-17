@@ -1,9 +1,17 @@
 * {
     font-weight: 800;
+    
 }
 
 body {
-    background-image: url(../random_grey_variations/random_grey_variations.png)
+    background-image: url(../random_grey_variations/random_grey_variations.png);
+    overflow-x: hidden;
+}
+
+.link{
+    position: relative;
+    left: 43%;
+    margin-top: 0;
 }
 
 .topic {
@@ -21,7 +29,13 @@ body {
     font-family: 'Amatic SC', cursive;
 }
 
-header {
+.text{
+    position: relative;
+    left: 35%;
+}
+
+header{
+    
     text-align: center;
     color: lightyellow;
     font-family: 'Amatic SC', cursive;
@@ -45,22 +59,15 @@ header {
     font-family: 'Amatic SC', cursive;
 }
 
-.gifs {
-    border-radius: 30px;
-    display: inline-block;
+.stillGif
+{
+    border-radius: 15%;
+    display: block;
     text-align: center;
-}
-
-.stillGif{
     position: relative;
-    display: inline;
+    left: 25%;
 }
 
-.gifs img {
+.gifs p{
     text-align: center;
-    display: inline;
-}
-
-.gifs p {
-    position: relative;
 }
