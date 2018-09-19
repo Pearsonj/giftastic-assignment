@@ -56,6 +56,7 @@ $(document).on('click',
         }).then(function (response) {
             console.log(queryURL);
             console.log(response);
+            
 
             var image = response.data;
 
@@ -70,7 +71,7 @@ $(document).on('click',
                 gifImage.attr("data-still", image[i].images.fixed_height_still.url);
                 gifImage.attr('data-state', 'still');
                 gifImage.attr('data-animate', image[i].images.fixed_height.url);
-                gifImage.addClass('img-responsive stillGif col-md-6 col-sm-3 col-3');
+                gifImage.addClass('img-responsive stillGif col-md-6 col-sm-9 col-9');
                 downloadBtn.addClass('link');
 
                 gifDiv.append(gifImage);
@@ -79,9 +80,11 @@ $(document).on('click',
 
                 gifDiv.append(downloadBtn);
 
-                
-
                 $(".gifs").prepend(gifDiv);
+
+                $('.stillGif').fadeIn(5000);
+
+                
 
                 // var animate = $('.stillGif').attr('src', image[i].images.fixed_height.url);
 
@@ -91,6 +94,7 @@ $(document).on('click',
                         $(this).attr('src', $(this).attr('data-animate'));
                         $(this).attr('data-state', 'animate');
                         console.log(state);
+                        
 
                     } else {
                         $(this).attr('src', $(this).attr('data-still'));
@@ -100,7 +104,10 @@ $(document).on('click',
 
 
                 });
+                
             }
         });
 
     });
+
+    

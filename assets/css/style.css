@@ -16,6 +16,7 @@ body {
 
 .topic {
     text-align: center;
+    margin-left: 4px;
     margin: 2px;
     position: relative;
     bottom: 55px;
